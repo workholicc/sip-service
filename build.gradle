@@ -39,3 +39,9 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+task deleteMyFile(type: Delete) {
+	delete fileTree("${buildDir}/libs/sip-service-0.0.1-SNAPSHOT-plain.jar")
+}
+//tasks.named("deleteMyFile") { dependsOn(":build") }
+//tasks.deleteMyFile.dependsOn(":build")
+tasks.build.dependsOn('deleteMyFile')
