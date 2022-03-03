@@ -14,7 +14,7 @@ import org.workholick.sip.service.entities.Login;
 @Repository
 public interface RegistrationRepo extends CrudRepository<Login, Long> {
 
-    @Query("from Login where upper(userName):=userName")
+    @Query("from Login where upper(userName)=:userName")
     public Login findByUserName(@Param("userName")String userName);
 
 }
