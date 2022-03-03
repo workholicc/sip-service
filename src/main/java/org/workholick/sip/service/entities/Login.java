@@ -3,10 +3,7 @@ package org.workholick.sip.service.entities;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 
 /**
  * @author Anish Singh(workholicc@gmail.com)
@@ -18,6 +15,7 @@ import javax.persistence.GenerationType;
 @Entity
 public class Login {
 
+    @Id
     @Column
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
