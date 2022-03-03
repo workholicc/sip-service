@@ -8,12 +8,12 @@ group = 'org.workholick'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 apply plugin: 'java'
-
+/*
 jar {
 	manifest {
 		attributes 'Main-Class': 'org.workholick.sip.service.SipServiceApplication'
 	}
-}
+}*/
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
@@ -27,8 +27,9 @@ repositories {
 }
 
 dependencies {
-	//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	//implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	runtimeOnly 'org.postgresql:postgresql'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
