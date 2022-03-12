@@ -5,7 +5,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.workholick.sip.service.entities.Login;
-import org.workholick.sip.service.model.http.impl.LoginModel;
+import org.workholick.sip.service.model.impl.LoginModel;
 import org.workholick.sip.service.repos.RegistrationRepo;
 
 import java.util.Locale;

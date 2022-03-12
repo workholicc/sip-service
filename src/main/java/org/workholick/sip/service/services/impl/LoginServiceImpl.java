@@ -5,8 +5,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.workholick.sip.service.entities.Login;
-import org.workholick.sip.service.model.http.impl.LoginModel;
-import org.workholick.sip.service.model.http.impl.UserModel;
+import org.workholick.sip.service.model.impl.LoginModel;
+import org.workholick.sip.service.model.impl.UserModel;
 import org.workholick.sip.service.repos.RegistrationRepo;
 import org.workholick.sip.service.services.LoginService;
 
@@ -30,7 +30,7 @@ public class LoginServiceImpl<T extends LoginModel, R extends UserModel> impleme
         Login login=repo.findByUserName(model.getUserName());
         if(login==null || login.getUserName()==null)
             return null;
-        if(passwordEncoder.matches(login.getPassword(), model.getPassword())){
+        if(passwordEncoder.matches(model.getPassword(),login.getPassword())){
             UserModel userModel=new UserModel();
             userModel.setUserName(login.getUserName());
             return (R) userModel;

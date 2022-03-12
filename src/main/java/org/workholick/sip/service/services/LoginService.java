@@ -1,6 +1,6 @@
 package org.workholick.sip.service.services;
 
-import org.workholick.sip.service.model.http.impl.UserModel;
+import org.workholick.sip.service.model.impl.UserModel;
 
 /**
  * @author Anish Singh(workholicc@gmail.com)

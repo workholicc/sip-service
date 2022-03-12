@@ -1,4 +1,4 @@
-package org.workholick.sip.service.model.http.impl;
+package org.workholick.sip.service.model.impl;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,8 +10,12 @@ import lombok.Setter;
  **/
 @Getter
 @Setter
-public class UserModel {
+public class LoginModel {
 
     private String userName;
+
+    private String password;
+
+    private String confirmPassword;
 
 }

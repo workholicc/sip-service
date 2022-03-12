@@ -5,13 +5,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.workholick.sip.service.model.http.ErrorResponse;
 import org.workholick.sip.service.model.http.Response;
 import org.workholick.sip.service.model.http.SuccessResponse;
-import org.workholick.sip.service.model.http.impl.LoginModel;
-import org.workholick.sip.service.model.http.impl.UserModel;
+import org.workholick.sip.service.model.impl.LoginModel;
+import org.workholick.sip.service.model.impl.UserModel;
 import org.workholick.sip.service.services.LoginService;
-import org.workholick.sip.service.services.RegistrationService;
 
 /**
  * @author Anish Singh(workholicc@gmail.com)
